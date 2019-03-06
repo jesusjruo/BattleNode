@@ -1,0 +1,22 @@
+{
+  "name": "battlenode",
+  "version": "1.0.0",
+  "description": "Juego de battleship para dos jugadores",
+  "main": "index.js",
+  "scripts": {
+    "test": "play"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusrafael97/BattleNode.git"
+  },
+  "author": "Jesus Urdaneta y Marcos Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesusrafael97/BattleNode/issues"
+  },
+  "homepage": "https://github.com/jesusrafael97/BattleNode#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
