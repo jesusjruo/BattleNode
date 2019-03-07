@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,5 +39,79 @@
             });
         }); 
      </script>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Battleship-NodeJS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="row vertical-center-row">
+        <div class="col-md-12">
+
+            <div id="disconnected">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4 text-center">
+                        <div class="alert alert-danger">
+                            <p>Server disconnected</p>
+                            <p>Please verify if you are or not connected</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="game" style="display:none;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+
+                            <ul class="list-group">
+                                
+                                <li class="list-group-item" id="messages-list">
+                                    <ul id="messages"></ul>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <form id="message-form" action="">
+                                        <div class="input-group">
+                                        <input id="message" class="form-control" autocomplete="off" />
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-primary">Send Message</button>
+                                        </div>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/jquery/jquery.min.js"></script>
+<script>
+
+  $(function() {
+    var socket = io();
+    $('from').submit(function(e){
+      e.preventDefault();
+      socket.emit('chat message', $('#m').val());
+      $('#m').val();
+      return false;
+    });
+  });
+
+</script>
+
+>>>>>>> master
 </body>
 </html>
